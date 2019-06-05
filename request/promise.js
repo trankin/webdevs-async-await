@@ -14,4 +14,4 @@ function run() {
     });
 }
 
-run().finally(() => {console.log("DONE")});
+run().then(() => {console.log("DONE")});
