@@ -40,7 +40,9 @@ function run() {
             .finally(() => {
                 if (db) {
                     console.log("DB Closed")
-                    return db.close();
+                    db.close().then(state => resolve());
+                } else {
+                    resolve();
                 }
             });
     });
