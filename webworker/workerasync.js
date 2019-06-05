@@ -1,4 +1,3 @@
-dowork();
 
 async function dowork() {
     for(let i = 0; i < 2000; i++) {
@@ -10,3 +9,5 @@ async function dowork() {
 
 
 function wait(ms) { return new Promise(resolve => setTimeout(resolve, ms));}
+
+dowork();

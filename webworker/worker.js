@@ -1,4 +1,3 @@
-dowork();
 
 function dowork() {
     for(let i = 0; i < 20000; i++) {
@@ -6,3 +5,5 @@ function dowork() {
     }
     postMessage({message: 'done working'});
 }
+
+dowork();
