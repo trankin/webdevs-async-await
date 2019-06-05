@@ -30,13 +30,14 @@ function run(callback){
                 let quips = JSON.parse(body);
                 quips.forEach((quip) => {
                     tasks.push(function(cb){
-
+                        console.log('starting');
                         db.collection(collectionName).update(
                             {id: quip.id},
                             {$set: quip},
-                            {upsert: true, safe: false}, cb);
-
-
+                            {upsert: true, safe: false}, (err) => {
+                                console.log('done');
+                                cb(err);
+                            });
                     });
                 });
 
