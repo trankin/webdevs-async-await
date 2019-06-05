@@ -6,9 +6,9 @@ function run() {
             request('https://quipvid.com/api/quips').then(body => Promise.resolve(JSON.parse(body))),
             request('https://cat-fact.herokuapp.com/facts').then(body => Promise.resolve(JSON.parse(body).all))
         ])
-        .then((values) => {
-            console.log(values[0].length, values[1].length);
-            resolve(values);
+        .then([quips, catfacts] => {
+            console.log(quips.length, catfacts.length);
+            resolve();
         });
     });
 }
