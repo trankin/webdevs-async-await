@@ -4,7 +4,7 @@ function run() {
     return new Promise((resolve, reject) => {
         request('https://quipvid.com/api/quips')
             .then((body) => {
-                console.log('body:', body); // Print the HTML for the Google homepage.
+                console.log('body:', JSON.parse(body)); // Print the HTML for the Google homepage.
                 resolve();
             })
             .catch(error => {

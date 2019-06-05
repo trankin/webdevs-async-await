@@ -6,7 +6,7 @@ function run(callback){
             console.log('error:', error); // Print the error if one occurred
             callback(error);
         } else {
-            console.log('body:', response.body); // Print the HTML for the Google homepage.
+            console.log('body:', JSON.parse(response.body)); // Print the HTML for the Google homepage.
             callback();
         }
     });
